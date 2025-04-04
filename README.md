@@ -31,7 +31,7 @@ Each table contains match-level statistics, team names, scores, possession metri
 
 ---
 
-## Core Analyses
+## Core Insights
 
 ### 1. Teams With Most Games of Majority Possession (per Season)
 - Identified which team dominated possession most frequently from 2020–2022.
@@ -55,8 +55,6 @@ WHERE team_rank = 1;
 ### 2. Duel Winners Who Still Lost the Match (2022)
 - Lists teams that won more duels but still lost — broken down by match stage.
 - Conditional CASE logic, filtering, tactical analysis.
-
-## Extended Insights
 
 ### 3. Top 5 Most Aggressive Teams by Stage
 - Identified teams that consistently played aggressively by taking the most total shots during UEFA matches.
