@@ -50,7 +50,6 @@ SELECT SEASON, TEAM_NAME, GAME_COUNT
 FROM ranked
 WHERE team_rank = 1;
 ```
-```markdown
 👉 [See full query](analysis/team_possession_leaders.sql)
 
 ### 2. Duel Winners Who Still Lost the Match (2022)
