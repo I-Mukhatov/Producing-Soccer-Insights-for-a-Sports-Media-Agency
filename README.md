@@ -77,13 +77,6 @@ SELECT STAGE, TEAM, TOTAL_SHOTS
 FROM ranked_teams
 WHERE shot_rank <= 5;
 
-💡 Tips:
-- Use **short but meaningful snippets** in the README — full queries can live in `.sql` files in your repo.
-- Link to the SQL file under each insight if you want:
-  
-```markdown
-👉 [See full query](analysis/top_5_aggressive_teams.sql)
-
 ### 4. Most Efficient Teams (Shots on Target per Goal)
 - Measures finishing quality.
 - Highlights teams that convert chances effectively.
