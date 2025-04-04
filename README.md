@@ -44,8 +44,45 @@ Each table contains match-level statistics, team names, scores, possession metri
 ## Extended Insights
 
 ### 3. Top 5 Most Aggressive Teams by Stage
-- Calculated total shots taken by teams across all stages.
-- Reveals high-pressure play styles.
+- Identified teams that consistently played aggressively by taking the most total shots during UEFA matches.
+- Combined data across 2020–2022 seasons to ensure a broader view of performance.
+- Used `RANK()` and `PARTITION BY STAGE` to select the top 5 teams per stage.
+
+```sql
+WITH all_matches AS (
+    SELECT * FROM SOCCER.TBL_UEFA_2020
+    UNION ALL
+    SELECT * FROM SOCCER.TBL_UEFA_2021
+    UNION ALL
+    SELECT * FROM SOCCER.TBL_UEFA_2022
+),
+all_shots AS (
+    SELECT STAGE, TEAM_NAME_HOME AS TEAM, TOTAL_SHOTS_HOME AS SHOTS
+    FROM all_matches
+    UNION ALL
+    SELECT STAGE, TEAM_NAME_AWAY AS TEAM, TOTAL_SHOTS_AWAY AS SHOTS
+    FROM all_matches
+),
+team_total_shots AS (
+    SELECT STAGE, TEAM, SUM(SHOTS) AS TOTAL_SHOTS
+    FROM all_shots
+    GROUP BY STAGE, TEAM
+),
+ranked_teams AS (
+    SELECT STAGE, TEAM, TOTAL_SHOTS,
+           RANK() OVER (PARTITION BY STAGE ORDER BY TOTAL_SHOTS DESC) AS shot_rank
+    FROM team_total_shots
+)
+SELECT STAGE, TEAM, TOTAL_SHOTS
+FROM ranked_teams
+WHERE shot_rank <= 5;
+
+💡 Tips:
+- Use **short but meaningful snippets** in the README — full queries can live in `.sql` files in your repo.
+- Link to the SQL file under each insight if you want:
+  
+```markdown
+👉 [See full query](analysis/top_5_aggressive_teams.sql)
 
 ### 4. Most Efficient Teams (Shots on Target per Goal)
 - Measures finishing quality.
