@@ -33,9 +33,9 @@ Each table contains match-level statistics, team names, scores, possession metri
 
 ## Core Analyses
 
-### 1. Team With Most Games of Majority Possession
-- **Query**: Identifies which team dominated possession most frequently from 2020–2022.
-- **Skills**: CASE statements, UNION ALL, aggregation, ranking.
+### 1. Teams With Most Games of Majority Possession per Season
+- Identified which team dominated possession most frequently from 2020–2022.
+- Used CASE statements, UNION ALL, aggregation, ranking.
 
 ### 2. Duel Winners Who Still Lost the Match (2022)
 - **Query**: Lists teams that won more duels but still lost — broken down by match stage.
