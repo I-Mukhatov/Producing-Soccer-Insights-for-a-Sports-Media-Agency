@@ -76,9 +76,7 @@ ranked_teams AS (
 SELECT STAGE, TEAM, TOTAL_SHOTS
 FROM ranked_teams
 WHERE shot_rank <= 5;
-
----
-
+```
 ### 4. Most Efficient Teams (Shots on Target per Goal)
 - Measures finishing quality.
 - Highlights teams that convert chances effectively.
