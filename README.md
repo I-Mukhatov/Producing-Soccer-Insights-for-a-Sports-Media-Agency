@@ -35,11 +35,24 @@ Each table contains match-level statistics, team names, scores, possession metri
 
 ### 1. Teams With Most Games of Majority Possession per Season
 - Identified which team dominated possession most frequently from 2020–2022.
-- Used CASE statements, UNION ALL, aggregation, ranking.
+Uses `CASE`, `RANK()`, and multi-table `UNION ALL` to compare team dominance across years.
+
+```sql
+WITH all_matches AS (
+  SELECT '2020' AS SEASON, * FROM SOCCER.TBL_UEFA_2020
+  UNION ALL
+  SELECT '2021' AS SEASON, * FROM SOCCER.TBL_UEFA_2021
+  UNION ALL
+  SELECT '2022' AS SEASON, * FROM SOCCER.TBL_UEFA_2022
+),
+...
+SELECT SEASON, TEAM_NAME, GAME_COUNT
+FROM ranked
+WHERE team_rank = 1;
 
 ### 2. Duel Winners Who Still Lost the Match (2022)
-- **Query**: Lists teams that won more duels but still lost — broken down by match stage.
-- **Skills**: Conditional CASE logic, filtering, tactical analysis.
+- Lists teams that won more duels but still lost — broken down by match stage.
+- Conditional CASE logic, filtering, tactical analysis.
 
 ## Extended Insights
 
