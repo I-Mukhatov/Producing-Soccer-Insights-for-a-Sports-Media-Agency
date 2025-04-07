@@ -141,7 +141,35 @@ FROM accuracy_check;
 ```
 👉 [View full query](analysis/win_probability_accuracy_overall.sql)
 
-### 6. Possession vs. Result Correlation
+### 6. Win Probability Accuracy Tracker (By Stage)
+- Evaluated how accurately the prediction model performed across different tournament stages (2020–2022).
+- Assigned the most likely predicted result based on highest probability field.
+- Compared with actual result using final scores.
+- Accuracy is calculated per stage to understand where the model performs better.
+
+```sql
+WITH all_matches AS (
+    SELECT * FROM SOCCER.TBL_UEFA_2020
+    UNION ALL
+    SELECT * FROM SOCCER.TBL_UEFA_2021
+    UNION ALL
+    SELECT * FROM SOCCER.TBL_UEFA_2022
+),
+...
+SELECT 
+  'ALL' AS STAGE,
+  COUNT(*) AS TOTAL_MATCHES,
+  SUM(IS_CORRECT) AS CORRECT_PREDICTIONS,
+  ROUND(SUM(IS_CORRECT) / COUNT(*), 3) AS ACCURACY
+FROM accuracy_check
+
+ORDER BY 
+  CASE WHEN STAGE = 'ALL' THEN 1 ELSE 0 END,
+  STAGE;
+```
+👉 [View full query](analysis/win_probability_accuracy_by_stage.sql)
+
+### 8. Possession vs. Result Correlation
 - Investigates the myth: “More possession = more wins.”
 - Shows whether tactical dominance leads to real results.
 
