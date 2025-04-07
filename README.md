@@ -120,9 +120,26 @@ ORDER BY EFFICIENCY DESC;
 ```
 👉 [View full query](analysis/most_efficient_teams.sql)
 
-### 5. Win Probability Accuracy Tracker
-- Compares predicted outcomes with actual results.
-- Evaluates prediction model reliability.
+### 5. Win Probability Accuracy Tracker (2020-2022)
+- Compared predicted outcomes with actual results.
+- Evaluated prediction model overall reliability.
+
+```sql
+WITH all_matches AS (
+    SELECT * FROM SOCCER.TBL_UEFA_2020
+    UNION ALL
+    SELECT * FROM SOCCER.TBL_UEFA_2021
+    UNION ALL
+    SELECT * FROM SOCCER.TBL_UEFA_2022
+),
+...
+SELECT 
+  COUNT(*) AS TOTAL_MATCHES,
+  SUM(IS_CORRECT) AS CORRECT_PREDICTIONS,
+  ROUND(SUM(IS_CORRECT) / COUNT(*), 3) AS ACCURACY
+FROM accuracy_check;
+```
+👉 [View full query](analysis/win_probability_accuracy_overall.sql)
 
 ### 6. Possession vs. Result Correlation
 - Investigates the myth: “More possession = more wins.”
