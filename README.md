@@ -35,7 +35,7 @@ Each table contains match-level statistics, team names, scores, possession metri
 
 ### 1. Teams With Most Games of Majority Possession (per Season)
 - Identified which team dominated possession most frequently from 2020–2022.
-- Uses `CASE`, `RANK()`, and multi-table `UNION ALL` to compare team dominance across years.
+- Used `CASE`, `RANK()`, and multi-table `UNION ALL` to compare team dominance across years.
 
 ```sql
 WITH all_matches AS (
@@ -52,9 +52,29 @@ WHERE team_rank = 1;
 ```
 👉 [See full query](analysis/team_possession_leaders.sql)
 
-### 2. Duel Winners Who Still Lost the Match (2022)
-- Lists teams that won more duels but still lost — broken down by match stage.
-- Conditional CASE logic, filtering, tactical analysis.
+### 2. Duel Winners Who Still Lost the Match (2020 - 2022)
+- Identified teams that won more duels than their opponent, yet still lost the game — a sign of inefficiency or poor finishing.
+- Extended across all three UEFA seasons (2020–2022) for deeper trends.
+- Used a `CASE` statement with a multi-season `UNION ALL` and match filtering.
+
+```sql
+WITH all_matches AS (
+    SELECT '2020' AS SEASON, * FROM SOCCER.TBL_UEFA_2020
+    UNION ALL
+    SELECT '2021' AS SEASON, * FROM SOCCER.TBL_UEFA_2021
+    UNION ALL
+    SELECT '2022' AS SEASON, * FROM SOCCER.TBL_UEFA_2022
+),
+...
+SELECT
+    SEASON,
+    STAGE,
+    TEAM_LOST
+FROM duel_lost_games
+WHERE TEAM_LOST IS NOT NULL
+ORDER BY SEASON, STAGE;
+```
+👉 [View full query](analysis/duel_winners_lost_match.sql)
 
 ### 3. Top 5 Most Aggressive Teams by Stage
 - Identified teams that consistently played aggressively by taking the most total shots during UEFA matches.
