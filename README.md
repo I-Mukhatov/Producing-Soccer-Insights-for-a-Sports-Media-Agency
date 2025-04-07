@@ -96,9 +96,29 @@ WHERE shot_rank <= 5;
 ```
 👉 [See full query](analysis/top_5_aggressive_teams.sql)
 
-### 4. Most Efficient Teams (Shots on Target per Goal)
-- Measures finishing quality.
-- Highlights teams that convert chances effectively.
+### 4. Most Efficient Teams (Shots on Target per Shot Attempt)
+- Calculated which teams were most efficient in turning shot attempts into shots on target across all UEFA seasons (2020–2022).
+- Combined home and away stats using `UNION ALL`, then aggregated and ranked based on an efficiency ratio.
+- Used `ROUND()` and `NULLIF()` for clean, safe calculation of ratios.
+
+```sql
+WITH all_matches AS (
+    SELECT * FROM SOCCER.TBL_UEFA_2020
+    UNION ALL
+    SELECT * FROM SOCCER.TBL_UEFA_2021
+    UNION ALL
+    SELECT * FROM SOCCER.TBL_UEFA_2022
+),
+...
+SELECT
+    TEAM,
+    TOTAL_TARGETS,
+    TOTAL_SHOTS,
+    ROUND(TOTAL_TARGETS / NULLIF(TOTAL_SHOTS, 0), 3) AS EFFICIENCY
+FROM team_total_shots
+ORDER BY EFFICIENCY DESC;
+```
+👉 [View full query](analysis/most_efficient_teams.sql)
 
 ### 5. Win Probability Accuracy Tracker
 - Compares predicted outcomes with actual results.
