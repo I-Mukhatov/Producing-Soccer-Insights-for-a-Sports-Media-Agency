@@ -52,7 +52,7 @@ WHERE team_rank = 1;
 ```
 👉 [See full query](analysis/team_possession_leaders.sql)
 
-### 2. Duel Winners Who Still Lost the Match (2020 - 2022)
+### 2. Duel Winners Who Still Lost the Match (2020-2022)
 - Identified teams that won more duels than their opponent, yet still lost the game — a sign of inefficiency or poor finishing.
 - Extended across all three UEFA seasons (2020–2022) for deeper trends.
 - Used a `CASE` statement with a multi-season `UNION ALL` and match filtering.
