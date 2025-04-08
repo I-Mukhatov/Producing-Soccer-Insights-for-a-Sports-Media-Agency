@@ -169,6 +169,31 @@ ORDER BY
 ```
 👉 [View full query](analysis/win_probability_accuracy_by_stage.sql)
 
+### 7. Win Probability Accuracy Tracker (By Team)
+- Evaluated how accurately the prediction model performed across all teams during UEFA tournaments (2020–2022).
+- Assigned the most likely predicted result for each match based on the highest probability field.
+- Compared with actual match results to determine whether the prediction was correct for each team.
+- Accuracy is calculated per team to identify which teams consistently outperformed or underperformed model expectations.
+
+```sql
+WITH all_matches AS (
+    SELECT * FROM SOCCER.TBL_UEFA_2020
+    UNION ALL
+    SELECT * FROM SOCCER.TBL_UEFA_2021
+    UNION ALL
+    SELECT * FROM SOCCER.TBL_UEFA_2022
+),
+...
+SELECT 
+	TEAM_NAME,
+	COUNT(*) AS TOTAL_MATCHES,
+	SUM(IS_CORRECT) AS CORRECT_PREDICTIONS,
+	ROUND(SUM(IS_CORRECT) / COUNT(*), 3) AS ACCURACY
+FROM accuracy_check
+GROUP BY TEAM_NAME
+ORDER BY ACCURACY DESC;
+```
+
 ### 8. Possession vs. Result Correlation
 - Investigates the myth: “More possession = more wins.”
 - Shows whether tactical dominance leads to real results.
