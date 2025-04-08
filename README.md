@@ -199,7 +199,7 @@ ORDER BY ACCURACY DESC;
 - Analyzed whether having majority possession led to winning across UEFA tournaments (2020–2022).
 - Assigned match outcomes and possession dominance, then compared them.
 - Calculated how often possession-dominant teams won, drew, or lost — broken down by season.
-- Provides a data-driven look at the common belief: "more possession = better results."
+- Provided a data-driven look at the common belief: "more possession = better results."
 
 ```sql
 WITH all_matches AS (
