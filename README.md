@@ -196,8 +196,30 @@ ORDER BY ACCURACY DESC;
 👉 [View full query](analysis/win_probability_accuracy_by_teams.sql)
 
 ### 8. Possession vs. Result Correlation
-- Investigates the myth: “More possession = more wins.”
-- Shows whether tactical dominance leads to real results.
+- Analyzed whether having majority possession led to winning across UEFA tournaments (2020–2022).
+- Assigned match outcomes and possession dominance, then compared them.
+- Calculated how often possession-dominant teams won, drew, or lost — broken down by season.
+- Provides a data-driven look at the common belief: "more possession = better results."
+
+```sql
+WITH all_matches AS (
+    SELECT '2020' AS SEASON, * FROM SOCCER.TBL_UEFA_2020
+    UNION ALL
+    SELECT '2021' AS SEASON, * FROM SOCCER.TBL_UEFA_2021
+    UNION ALL
+    SELECT '2022' AS SEASON, * FROM SOCCER.TBL_UEFA_2022
+),
+...
+SELECT 
+	SEASON,
+	POSSESSION_VS_RESULT,
+	COUNT(*) AS MATCH_COUNT,
+	ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY SEASON), 2) AS PERCENTAGE
+FROM possession_to_match_winner
+GROUP BY SEASON, POSSESSION_VS_RESULT
+ORDER BY SEASON;
+```
+👉 [View full query](analysis/possession_vs_result_corr.sql)
 
 ## Views Created
 
