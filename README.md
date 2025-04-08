@@ -193,6 +193,7 @@ FROM accuracy_check
 GROUP BY TEAM_NAME
 ORDER BY ACCURACY DESC;
 ```
+👉 [View full query](analysis/win_probability_accuracy_by_teams.sql)
 
 ### 8. Possession vs. Result Correlation
 - Investigates the myth: “More possession = more wins.”
