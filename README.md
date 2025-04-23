@@ -52,9 +52,9 @@ This SQL project analyzes match data from the UEFA Championship (2020–2022) to
 | `PREDICTION_TEAM_AWAY_WIN` | Probability of away team to win | `FLOAT` |
 | `LOCATION` | Stadium where the match was held | `VARCHAR(50)` | 
 
-- `SOCCER.TBL_UEFA_2020`
-- `SOCCER.TBL_UEFA_2021`
-- `SOCCER.TBL_UEFA_2022`
+- [`SOCCER.TBL_UEFA_2020`](data/TBL_UEFA_2020_Sample.csv)
+- [`SOCCER.TBL_UEFA_2021`](data/TBL_UEFA_2021_Sample.csv)
+- [`SOCCER.TBL_UEFA_2022`](data/TBL_UEFA_2022_Sample.csv)
 
 Each table contains match-level statistics, team names, scores, possession metrics, and prediction probabilities for each UEFA match played.
 
