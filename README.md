@@ -24,8 +24,9 @@ This SQL project analyzes match data from the UEFA Championship (2020–2022) to
 
 ## 📊 Datasets
 
-## Table Name(s): `TBL_UEFA_2020` | `TBL_UEFA_2021` | `TBL_UEFA_2022`
-### Note : All three tables have same column names and data types
+### Schema name: `SOCCER`
+### Table Name(s): `TBL_UEFA_2020` | `TBL_UEFA_2021` | `TBL_UEFA_2022`
+#### Note : All three tables have same column names and data types
 
 | Column | Definition | Data type |
 |--------|------------|-----------|
