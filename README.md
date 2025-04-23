@@ -3,6 +3,7 @@
 This SQL project analyzes match data from the UEFA Championship (2020–2022) to uncover team performance patterns and tactical insights. The goal is to generate actionable insights for a sports media agency using Snowflake SQL.
 
 ---
+![image](https://github.com/user-attachments/assets/b0cb6897-518c-4b37-9e30-e6ba3c93abd6)
 
 ## 📌 Project Objectives
 
