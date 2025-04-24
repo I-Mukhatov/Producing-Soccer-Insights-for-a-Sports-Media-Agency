@@ -279,6 +279,8 @@ WITH all_matches AS (
 
 - **`VIEW_DUEL_LOSSES_BY_STAGE`**
 
+---
+
 ## Key Skills Demonstrated
 
 - SQL aggregation, CASE logic, filtering
