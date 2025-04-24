@@ -256,14 +256,14 @@ ORDER BY SEASON;
 
 **Note:** Views in this project are presented for demonstration purposes only. Due to environment restrictions in DataLab, actual CREATE VIEW execution was not permitted. Logic remains fully reusable in any Snowflake-compatible environment.
 
-- `VIEW_TEAM_POSSESSION_ANALYSIS`
+- **`VIEW_TEAM_POSSESSION_ANALYSIS`**
 ```sql
 -- View: VIEW_TEAM_POSSESSION_ANALYSIS
 -- Description: Identifies the team with majority possession in each match across all seasons.
 -- Data Source: TBL_UEFA_2020, TBL_UEFA_2021, TBL_UEFA_2022
 -- Dependencies: Requires possession fields and team names.
-
 CREATE VIEW VIEW_TEAM_POSSESSION_ANALYSIS AS
+
 WITH all_matches AS (
     SELECT '2020' AS SEASON, * FROM SOCCER.TBL_UEFA_2020
     UNION ALL
@@ -271,10 +271,11 @@ WITH all_matches AS (
     UNION ALL
     SELECT '2022' AS SEASON, * FROM SOCCER.TBL_UEFA_2022
 )
+...
 ```
 👉 [View full query](analysis/view_team_possession_analysis.sql)
 
-- `VIEW_DUEL_LOSSES_BY_STAGE`
+- **`VIEW_DUEL_LOSSES_BY_STAGE`**
 
 ## Key Skills Demonstrated
 
