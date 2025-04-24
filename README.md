@@ -252,6 +252,8 @@ ORDER BY SEASON;
 ```
 👉 [View full query](analysis/possession_vs_result_corr.sql)
 
+---
+
 ## Views Created
 
 **Note:** Views in this project are presented for demonstration purposes only. Due to environment restrictions in DataLab, actual CREATE VIEW execution was not permitted. Logic remains fully reusable in any Snowflake-compatible environment.
