@@ -258,14 +258,17 @@ ORDER BY SEASON;
 
 **Note:** Views in this project are presented for demonstration purposes only. Due to environment restrictions in DataLab, actual CREATE VIEW execution was not permitted. Logic remains fully reusable in any Snowflake-compatible environment.
 
-- **`VIEW_TEAM_POSSESSION_ANALYSIS`**
+#### `VIEW_TEAM_POSSESSION_ANALYSIS`
+- Identifies the team with majority possession in each match, across all UEFA seasons (2020-2022).
+- It transforms raw possession data into a match-level insight: “Who dominated possession in this game?”
+- Includes match stage, date, and team names for contextual analysis.
+- Makes other SQL queries simpler and more readable by offloading the logic.
 ```sql
 -- View: VIEW_TEAM_POSSESSION_ANALYSIS
 -- Description: Identifies the team with majority possession in each match across all seasons.
 -- Data Source: TBL_UEFA_2020, TBL_UEFA_2021, TBL_UEFA_2022
 -- Dependencies: Requires possession fields and team names.
 CREATE VIEW VIEW_TEAM_POSSESSION_ANALYSIS AS
-
 WITH all_matches AS (
     SELECT '2020' AS SEASON, * FROM SOCCER.TBL_UEFA_2020
     UNION ALL
@@ -277,7 +280,27 @@ WITH all_matches AS (
 ```
 👉 [View full query](analysis/view_team_possession_analysis.sql)
 
-- **`VIEW_DUEL_LOSSES_BY_STAGE`**
+####`VIEW_DUEL_LOSSES_BY_STAGE`
+- Identifies matches where a team won more duels but still lost the game, across all UEFA seasons (2020–2022).
+- Highlights potential tactical inefficiencies — teams that dominate physical play but fail to convert it into results.
+- Includes match stage, date, and team names for contextual analysis.
+- Useful for stage-wise performance breakdowns and in-depth tactical reviews.
+```sql
+-- View: VIEW_DUEL_LOSSES_BY_STAGE
+-- Description: Captures matches where a team won more duels but still lost the match, broken down by stage.
+-- Data Source: TBL_UEFA_2020, TBL_UEFA_2021, TBL_UEFA_2022
+-- Dependencies: Requires duels fields and team names.
+CREATE VIEW VIEW_DUEL_LOSSES_BY_STAGE AS
+WITH all_matches AS (
+    SELECT '2020' AS SEASON, * FROM SOCCER.TBL_UEFA_2020
+    UNION ALL
+    SELECT '2021' AS SEASON, * FROM SOCCER.TBL_UEFA_2021
+    UNION ALL
+    SELECT '2022' AS SEASON, * FROM SOCCER.TBL_UEFA_2022
+)
+...
+```
+👉 [View full query](analysis/view_duel_losses_by_stage.sql)
 
 ---
 
