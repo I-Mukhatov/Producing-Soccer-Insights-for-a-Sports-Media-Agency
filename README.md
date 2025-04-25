@@ -312,6 +312,11 @@ WITH all_matches AS (
 - Makes performance patterns immediately visible.
 **Created Visualizations**
 - 📊 Bar charts: Accuracy by stage & Accuracy by team
+**Insight Summary**
+- Stage matters: Predictive accuracy declines in later, more competitive rounds.
+- Team type matters: The model performed best with teams that likely followed more consistent patterns — weaker clubs may have been easier to predict.
+- Opportunity: Future improvements could involve retraining models specifically for knockout rounds or elite matchups.
+👉 [View code/visuals](notebooks/)
 ---
 
 ## 📝 Key Skills Demonstrated
