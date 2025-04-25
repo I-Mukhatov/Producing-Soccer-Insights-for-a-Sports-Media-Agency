@@ -310,14 +310,17 @@ WITH all_matches AS (
 **Why it matters:**
 - Helps stakeholders see where the prediction model works best — or fails.
 - Makes performance patterns immediately visible.
+
 **Created Visualizations**
 - 📊 Bar charts: Accuracy by stage & Accuracy by team
+
 **Insight Summary**
 - **Stage matters:** Predictive accuracy declines in later, more competitive rounds.
 - **Team type matters:** The model performed best with teams that likely followed more consistent patterns — weaker clubs may have been easier to predict.
 - **Opportunity:** Future improvements could involve retraining models specifically for knockout rounds or elite matchups.
 
 👉 [View code/visuals](notebooks/UEFA_Insights_Win_Probability_Accuracy_Per_Stage_Per_Team.ipynb)
+
 ---
 
 ## 📝 Key Skills Demonstrated
