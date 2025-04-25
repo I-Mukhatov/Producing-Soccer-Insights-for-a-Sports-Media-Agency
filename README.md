@@ -306,7 +306,7 @@ WITH all_matches AS (
 ---
 
 ## 📈 Core Insights Visualization
-#### 1. Win Probability Accuracy (Per Stage / Per Team)
+### 1. Win Probability Accuracy (Per Stage / Per Team)
 **Why it matters:**
 - Helps stakeholders see where the prediction model works best — or fails.
 - Makes performance patterns immediately visible.
@@ -321,7 +321,7 @@ WITH all_matches AS (
 
 👉 [View code/visuals](notebooks/UEFA_Insights_Win_Probability_Accuracy_Per_Stage_Per_Team.ipynb)
 
-#### 1. Possession vs. Result Correlation
+### 2. Possession vs. Result Correlation
 **Why it matters:**
 - Debunks or confirms the myth that "more possession = more wins".
 - Visual impact strengthens the insight (e.g., surprising % of losses with high possession).
