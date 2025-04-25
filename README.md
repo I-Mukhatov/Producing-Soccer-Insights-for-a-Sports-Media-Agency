@@ -254,7 +254,7 @@ ORDER BY SEASON;
 
 ---
 
-## Views Created
+## 🔎 Views Created
 
 **Note:** Views in this project are presented for demonstration purposes only. Due to environment restrictions in DataLab, actual CREATE VIEW execution was not permitted. Logic remains fully reusable in any Snowflake-compatible environment.
 
@@ -309,7 +309,7 @@ WITH all_matches AS (
 
 ---
 
-## Key Skills Demonstrated
+## 📝 Key Skills Demonstrated
 
 - SQL aggregation, CASE logic, filtering
 - Data modeling using Snowflake views
