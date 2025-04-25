@@ -312,7 +312,7 @@ WITH all_matches AS (
 - Makes performance patterns immediately visible.
 
 **Created Visualizations**
-- 📊 Bar charts: Accuracy by stage & Accuracy by team
+- 📊 Bar charts: Accuracy by stage & Accuracy by team.
 
 **Insight Summary**
 - **Stage matters:** Predictive accuracy declines in later, more competitive rounds.
@@ -320,6 +320,17 @@ WITH all_matches AS (
 - **Opportunity:** Future improvements could involve retraining models specifically for knockout rounds or elite matchups.
 
 👉 [View code/visuals](notebooks/UEFA_Insights_Win_Probability_Accuracy_Per_Stage_Per_Team.ipynb)
+
+#### 1. Possession vs. Result Correlation
+**Why it matters:**
+- Debunks or confirms the myth that "more possession = more wins".
+- Visual impact strengthens the insight (e.g., surprising % of losses with high possession).
+
+**Created Visualizations**
+- 📊 Pie or donut chart: Win/loss/draw breakdown when a team had possession advantage.
+- 📊 Stacked bar chart: Possession result types by season or stage.
+
+**Insight Summary**
 
 ---
 
