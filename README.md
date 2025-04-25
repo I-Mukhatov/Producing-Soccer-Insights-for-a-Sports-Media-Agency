@@ -18,7 +18,7 @@ This SQL project analyzes match data from the UEFA Championship (2020–2022) to
 
 - **SQL** (Snowflake dialect)
 - **Snowflake Cloud Data Warehouse**
-- (Optional) Python + Jupyter Notebooks for visualization
+- **Python** + **Jupyter Notebooks** for visualization of core insights
 
 ---
 
@@ -62,7 +62,7 @@ Each table contains match-level statistics, team names, scores, possession metri
 
 ---
 
-## Core Insights
+## 💡 Core Insights
 
 ### 1. Teams With Most Games of Majority Possession (per Season)
 - Identified which team dominated possession most frequently from 2020–2022.
@@ -302,6 +302,10 @@ WITH all_matches AS (
 ...
 ```
 👉 [View full query](analysis/view_duel_losses_by_stage.sql)
+
+---
+
+## 📈 Core Insights Visualization
 
 ---
 
