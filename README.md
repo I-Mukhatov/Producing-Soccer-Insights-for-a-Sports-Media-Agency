@@ -306,7 +306,12 @@ WITH all_matches AS (
 ---
 
 ## 📈 Core Insights Visualization
-
+#### 1. Win Probability Accuracy (Per Stage / Per Team)
+**Why it matters:**
+- Helps stakeholders see where the prediction model works best — or fails.
+- Makes performance patterns immediately visible.
+**Created Visualizations**
+- 📊 Bar charts: Accuracy by stage & Accuracy by team
 ---
 
 ## 📝 Key Skills Demonstrated
