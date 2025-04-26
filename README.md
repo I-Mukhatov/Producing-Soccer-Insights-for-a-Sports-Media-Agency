@@ -327,8 +327,8 @@ WITH all_matches AS (
 - Visual impact strengthens the insight (e.g., surprising % of losses with high possession).
 
 **Created Visualizations**
-- 📊 Pie or donut chart: Win/loss/draw breakdown when a team had possession advantage.
-- 📊 Stacked bar chart: Possession result types by season or stage.
+- 📊 Pie chart: Win/loss/draw breakdown when a team had possession advantage.
+- 📊 Stacked bar chart: Possession result types by season.
 
 **Insight Summary**
 
