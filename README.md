@@ -332,6 +332,8 @@ WITH all_matches AS (
 
 **Insight Summary**
 
+👉 [View code/visuals](notebooks/UEFA_Insights_Possession_vs_Result_Correlation.ipynb)
+
 ---
 
 ## 📝 Key Skills Demonstrated
