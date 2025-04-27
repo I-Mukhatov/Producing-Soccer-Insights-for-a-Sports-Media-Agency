@@ -331,7 +331,9 @@ WITH all_matches AS (
 - 📊 Stacked bar chart: Possession result types by season.
 
 **Insight Summary**
-
+- **Ball possession matters:** Possession dominance improves winning chances but doesn’t guarantee victory.  
+- **Opportunity:** Further team-level analysis of ball possession versus result correlation analysis is needed to answer the question whether possession dominant teams perform better.
+ 
 👉 [View code/visuals](notebooks/UEFA_Insights_Possession_vs_Result_Correlation.ipynb)
 
 ---
