@@ -1,6 +1,18 @@
-# ⚽ Producing Soccer Insights for a Sports Media Agency
+# ⚽ Producing Tactical Soccer Insights with Snowflake SQL & Python: UEFA Champions League (2020-2022)
 
-This SQL project analyzes match data from the UEFA Championship (2020–2022) to uncover team performance patterns and tactical insights. The goal is to generate actionable insights for a sports media agency using Snowflake SQL.
+## 📄 About This Project
+
+This project focuses on producing actionable soccer insights for a sports media agency by analyzing match data from the UEFA Champions League (2020-2022 seasons).  
+The goal is to uncover tactical patterns, team performance trends, and model prediction strengths by leveraging advanced SQL queries and visual storytelling techniques.
+
+Key deliverables include:
+- Win probability model evaluation.
+- Possession dominance vs match results.
+- Shooting efficiency metrics across teams.
+- Tactical breakdown of duel dominance and match outcomes.
+- Data-driven summaries with clean, insightful visualizations.
+
+All analyses were conducted using Snowflake SQL and Python (Pandas, Matplotlib, Seaborn) in a DataLab environment, with a clear focus on clean query design, data quality handling, and business-driven insights.
 
 ---
 ![image](https://github.com/user-attachments/assets/b0cb6897-518c-4b37-9e30-e6ba3c93abd6)
@@ -354,10 +366,21 @@ WITH all_matches AS (
 
 ## 📝 Key Skills Demonstrated
 
-- SQL aggregation, CASE logic, filtering
-- Data modeling using Snowflake views
-- Analyzing sports performance using structured data
-- Optional: Data storytelling via visualizations
+- **Advanced SQL Querying**:  
+  Built complex multi-CTE queries, applied CASE logic, UNION ALL operations, dynamic window functions, and calculated key performance metrics.
+- **Data Cleaning and Validation**:  
+  Identified and corrected anomalies (e.g., efficiency > 100%), handled NULL values responsibly, and ensured data integrity throughout the analysis.
+- **Analytical Thinking and Insight Generation**:  
+  Moved beyond descriptive analysis to uncover hidden patterns, unexpected results, and real-world tactical implications.
+- **Visual Storytelling**:  
+  Designed clear, publication-ready charts (bar charts, pie charts, stacked bar charts) with well-labeled axes, percentage annotations, and contextual commentary.
+- **Project Organization and Documentation**:  
+  Structured notebooks and SQL files with reusable templates, detailed markdown commentary, and professional-grade README documentation.
+- **Critical Thinking**:  
+  Applied structured frameworks to generate insights systematically (common outcome, unexpected pattern, real-world meaning) - showing not just technical ability but strategic analysis skills.
+- **Portfolio-Ready Communication**:  
+  Presented each insight with a clear storyline suitable for GitHub presentation and future professional discussions.
+
 
 ## 📬 Contact
 
