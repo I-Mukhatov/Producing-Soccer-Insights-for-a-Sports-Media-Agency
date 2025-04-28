@@ -336,6 +336,20 @@ WITH all_matches AS (
  
 👉 [View code/visuals](notebooks/UEFA_Insights_Possession_vs_Result_Correlation.ipynb)
 
+### 3. Most Efficient Teams (Shots on Target per Shot Attempt)
+**Why it matters:**
+- Highlights which teams are precise and clinical — or wasteful
+- Great for comparing team styles
+
+**Created Visualizations:**
+- 📊 Horizontal bar chart: Top 15 Most Efficient Teams
+
+**Insight Summary**
+- **Shooting efficiency matters:** Indicates a team's ability to convert opportunities into goals, which is crucial for winning matches.
+- **Team's offensive strategy:** In real-world football, a team's offensive strategy capitalizes on the vulnerabilities of an opposing defense to advance the ball and create scoring opportunities.
+
+👉 [View code/visuals](notebooks/UEFA_Insights_Shooting_Efficiency_Per_Team.ipynb)
+
 ---
 
 ## 📝 Key Skills Demonstrated
