@@ -1,4 +1,4 @@
-# Producing Tactical Soccer Insights with Snowflake SQL & Python: UEFA Champions League (2020-2022)
+# UEFA Champions League Analytics (2020 – 2022) with Snowflake SQL & Python
 
 ## Project Overview
 
