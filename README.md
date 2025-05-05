@@ -1,6 +1,6 @@
-# ⚽ Producing Tactical Soccer Insights with Snowflake SQL & Python: UEFA Champions League (2020-2022)
+# Producing Tactical Soccer Insights with Snowflake SQL & Python: UEFA Champions League (2020-2022)
 
-## 📄 About This Project
+## Project Overview
 
 This project focuses on producing actionable soccer insights for a sports media agency by analyzing match data from the UEFA Champions League (2020-2022 seasons).  
 The goal is to uncover tactical patterns, team performance trends, and model prediction strengths by leveraging advanced SQL queries and visual storytelling techniques.
@@ -17,7 +17,7 @@ All analyses were conducted using Snowflake SQL and Python (Pandas, Matplotlib, 
 ---
 ![image](https://github.com/user-attachments/assets/b0cb6897-518c-4b37-9e30-e6ba3c93abd6)
 
-## 📌 Project Objectives
+## Project Objectives
 
 - Identify team performance trends based on possession, duels, and shots.
 - Evaluate predictive model accuracy based on actual match outcomes.
@@ -26,7 +26,7 @@ All analyses were conducted using Snowflake SQL and Python (Pandas, Matplotlib, 
 
 ---
 
-## 🧰 Tools & Tech
+## Tools & Tech
 
 - **SQL** (Snowflake dialect)
 - **Snowflake Cloud Data Warehouse**
@@ -34,7 +34,7 @@ All analyses were conducted using Snowflake SQL and Python (Pandas, Matplotlib, 
 
 ---
 
-## 📊 Datasets
+## Datasets Overview
 
 #### Schema name: `SOCCER`
 #### Table Name(s): `TBL_UEFA_2020` | `TBL_UEFA_2021` | `TBL_UEFA_2022`
@@ -74,7 +74,7 @@ Each table contains match-level statistics, team names, scores, possession metri
 
 ---
 
-## 💡 Core Insights
+## Core Insights
 
 ### 1. Teams With Most Games of Majority Possession (per Season)
 - Identified which team dominated possession most frequently from 2020–2022.
@@ -266,7 +266,7 @@ ORDER BY SEASON;
 
 ---
 
-## 🔎 Views Created
+## Views Created
 
 **Note:** Views in this project are presented for demonstration purposes only. Due to environment restrictions in DataLab, actual CREATE VIEW execution was not permitted. Logic remains fully reusable in any Snowflake-compatible environment.
 
@@ -317,7 +317,7 @@ WITH all_matches AS (
 
 ---
 
-## 📈 Core Insights Visualization
+## Core Insights Visualization
 ### 1. Win Probability Accuracy (Per Stage / Per Team)
 **Why it matters:**
 - Helps stakeholders see where the prediction model works best — or fails.
@@ -364,7 +364,7 @@ WITH all_matches AS (
 
 ---
 
-## 📝 Key Skills Demonstrated
+## Key Skills Demonstrated
 
 - **Advanced SQL Querying**:  
   Built complex multi-CTE queries, applied CASE logic, UNION ALL operations, dynamic window functions, and calculated key performance metrics.
